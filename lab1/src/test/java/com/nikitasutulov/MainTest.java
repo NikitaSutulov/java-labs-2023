@@ -41,7 +41,7 @@ public class MainTest {
     @Test
     public void testRemoveNulls() {
         String[] array = {"hello", "world", "Java", null, null, null};
-        String[] cleaned = removeNulls(array);
+        String[] cleaned = getArrayWithoutNullsAtTheEnd(array);
         String[] expected = {"hello", "world", "Java"};
         assertArrayEquals(expected, cleaned);
     }

@@ -38,7 +38,7 @@ public class Main {
                 latinWords[validIndex++] = word;
             }
         }
-        return removeNulls(latinWords);
+        return getArrayWithoutNullsAtTheEnd(latinWords);
     }
 
     public static boolean isCharLatin(char ch) {
@@ -60,14 +60,14 @@ public class Main {
                 filteredWords[validIndex++] = word;
             }
         }
-        return removeNulls(filteredWords);
+        return getArrayWithoutNullsAtTheEnd(filteredWords);
     }
 
     public static boolean isCharVowel(char ch) {
         return Character.toString(ch).matches("[AIEOUaieou]");
     }
 
-    public static String[] removeNulls(String[] array) {
+    public static String[] getArrayWithoutNullsAtTheEnd(String[] array) {
         for (int i = 0; i < array.length; i++) {
             if (array[i] == null) {
                 return Arrays.copyOfRange(array, 0, i);
