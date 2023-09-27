@@ -1,4 +1,4 @@
-package com.nikitasutulov;
+package com.nikitasutulov.shapes;
 
 public abstract class Shape implements Drawable {
     public final String shapeColor;

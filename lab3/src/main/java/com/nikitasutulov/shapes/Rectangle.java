@@ -1,4 +1,4 @@
-package com.nikitasutulov;
+package com.nikitasutulov.shapes;
 
 public class Rectangle extends Shape {
     public float length;
@@ -21,6 +21,6 @@ public class Rectangle extends Shape {
 
     @Override
     public String toString() {
-        return "Rectangle | color: " + shapeColor + ", length: " + length + ", width: " + width;
+        return "Rectangle\t| color: " + shapeColor + ", length: " + length + ", width: " + width + ", area: " + calcArea();
     }
 }

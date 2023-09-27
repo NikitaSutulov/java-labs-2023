@@ -1,4 +1,6 @@
-package com.nikitasutulov;
+package com.nikitasutulov.comparators;
+
+import com.nikitasutulov.shapes.Shape;
 
 import java.util.Comparator;
 

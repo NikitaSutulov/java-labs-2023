@@ -1,4 +1,6 @@
-package com.nikitasutulov;
+package com.nikitasutulov.views;
+
+import com.nikitasutulov.shapes.Shape;
 
 public class ShapeView {
     public static final String INPUT_COMMAND_TEXT = "Enter the command.";

@@ -1,4 +1,11 @@
-package com.nikitasutulov;
+package com.nikitasutulov.models;
+
+import com.nikitasutulov.comparators.AreaComparator;
+import com.nikitasutulov.comparators.ColorComparator;
+import com.nikitasutulov.shapes.Circle;
+import com.nikitasutulov.shapes.Rectangle;
+import com.nikitasutulov.shapes.Shape;
+import com.nikitasutulov.shapes.Triangle;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -8,7 +15,7 @@ public class ShapeModel {
     public static final int SHAPES_TYPES_COUNT = 3;
     public static final float SIZE_RANGE = 25f;
     public static final String[] COLORS = {"Red", "Blue", "Green", "Yellow", "Orange", "Purple"};
-    private Shape[] dataset;
+    private final Shape[] dataset;
     public ShapeModel() {
         dataset = new Shape[DATASET_SIZE];
         generateRandomDataset();

@@ -1,4 +1,6 @@
-package com.nikitasutulov;
+package com.nikitasutulov.utilities;
+
+import com.nikitasutulov.views.ShapeView;
 
 import java.util.Scanner;
 

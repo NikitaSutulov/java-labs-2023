@@ -1,4 +1,8 @@
-package com.nikitasutulov;
+package com.nikitasutulov.controllers;
+
+import com.nikitasutulov.utilities.InputManager;
+import com.nikitasutulov.models.ShapeModel;
+import com.nikitasutulov.views.ShapeView;
 
 public class ShapeController {
     private final ShapeModel model;

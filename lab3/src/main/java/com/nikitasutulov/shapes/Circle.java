@@ -1,4 +1,4 @@
-package com.nikitasutulov;
+package com.nikitasutulov.shapes;
 
 public class Circle extends Shape {
 
@@ -21,6 +21,6 @@ public class Circle extends Shape {
 
     @Override
     public String toString() {
-        return "Circle | color: " + shapeColor + ", radius: " + radius;
+        return "Circle\t\t| color: " + shapeColor + ", radius: " + radius + ", area: " + calcArea();
     }
 }
