@@ -23,6 +23,8 @@ public class ShapeView {
             exit;
             help.
             """;
+    public static final String EXITING = "Exiting...";
+    public static final String INVALID_COMMAND = "Invalid command. Type 'help' for a list of available commands.";
 
     public void printDatasetWithMessage(String startingMessage, Shape[] dataset) {
         System.out.println(startingMessage);

@@ -9,6 +9,9 @@ public abstract class Shape implements Drawable {
     public abstract float calcArea();
 
     @Override
+    public void draw() {}
+
+    @Override
     public String toString() {
         return super.toString();
     }

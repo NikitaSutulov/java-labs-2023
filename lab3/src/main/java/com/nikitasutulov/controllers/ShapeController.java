@@ -19,7 +19,7 @@ public class ShapeController {
             String command = inputManager.getCommandFromInput();
             switch (command) {
                 case InputManager.EXIT:
-                    view.printMessage("Exiting...");
+                    view.printMessage(ShapeView.EXITING);
                     return;
                 case InputManager.HELP:
                     view.printMessage(ShapeView.HELP);
@@ -46,7 +46,7 @@ public class ShapeController {
                     view.printDatasetWithMessage(ShapeView.SORT_COLOR, model.getDatasetSortedByColor());
                     break;
                 default:
-                    view.printMessage("Invalid command. Type 'help' for a list of available commands.");
+                    view.printMessage(ShapeView.INVALID_COMMAND);
                     break;
             }
         }

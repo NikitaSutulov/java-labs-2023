@@ -22,11 +22,6 @@ public class Triangle extends Shape {
     }
 
     @Override
-    public void draw() {
-        System.out.println("Triangle draw method call");
-    }
-
-    @Override
     public String toString() {
         return "Triangle\t| color: " + shapeColor + ", sides: " + side1 + ", " + side2 + ", " + side3 + ", area: " + calcArea();
     }

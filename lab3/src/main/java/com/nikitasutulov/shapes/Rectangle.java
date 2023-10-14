@@ -15,11 +15,6 @@ public class Rectangle extends Shape {
     }
 
     @Override
-    public void draw() {
-        System.out.println("Rectangle draw method call");
-    }
-
-    @Override
     public String toString() {
         return "Rectangle\t| color: " + shapeColor + ", length: " + length + ", width: " + width + ", area: " + calcArea();
     }
