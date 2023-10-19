@@ -15,7 +15,7 @@ public class VehiclesEmbarkingTest {
         PoliceOfficer policeOfficer = new PoliceOfficer("John Lawlover");
         List<Human> expectedHumans = List.of(new Human[]{human, firefighter, policeOfficer});
 
-        Taxi<Human> taxi = new Taxi<Human>("Test taxi", 3);
+        Taxi<Human> taxi = new Taxi<>("Test taxi", 3);
         taxi.embark(human);
         taxi.embark(firefighter);
         taxi.embark(policeOfficer);
@@ -30,7 +30,7 @@ public class VehiclesEmbarkingTest {
         PoliceOfficer policeOfficer = new PoliceOfficer("John Lawlover");
         List<Human> expectedHumans = List.of(new Human[]{human, firefighter, policeOfficer});
 
-        Bus<Human> bus = new Bus<Human>("Test bus", 5);
+        Bus<Human> bus = new Bus<>("Test bus", 5);
         bus.embark(human);
         bus.embark(firefighter);
         bus.embark(policeOfficer);
@@ -44,7 +44,7 @@ public class VehiclesEmbarkingTest {
         Firefighter firefighter = new Firefighter("Eric Firehater");
         PoliceOfficer policeOfficer = new PoliceOfficer("John Lawlover");
 
-        Taxi<Human> taxi = new Taxi<Human>("Test taxi", 2);
+        Taxi<Human> taxi = new Taxi<>("Test taxi", 2);
         taxi.embark(human);
         taxi.embark(firefighter);
 
@@ -60,7 +60,7 @@ public class VehiclesEmbarkingTest {
         Firefighter firefighter = new Firefighter("Eric Firehater");
         PoliceOfficer policeOfficer = new PoliceOfficer("John Lawlover");
 
-        Bus<Human> bus = new Bus<Human>("Test bus", 2);
+        Bus<Human> bus = new Bus<>("Test bus", 2);
         bus.embark(human);
         bus.embark(firefighter);
 
@@ -77,7 +77,7 @@ public class VehiclesEmbarkingTest {
         PoliceOfficer policeOfficer2 = new PoliceOfficer("Matthew Crimehater");
         PoliceOfficer policeOfficer3 = new PoliceOfficer("Mark the Righteous");
 
-        PoliceCar<PoliceOfficer> policeCar = new PoliceCar<PoliceOfficer>("Test police car", 2);
+        PoliceCar<PoliceOfficer> policeCar = new PoliceCar<>("Test police car", 2);
         policeCar.embark(policeOfficer1);
         policeCar.embark(policeOfficer2);
 
@@ -94,7 +94,7 @@ public class VehiclesEmbarkingTest {
         Firefighter firefighter2 = new Firefighter("Matthew Flamehater");
         Firefighter firefighter3 = new Firefighter("Mark the Brave");
 
-        FireTruck<Firefighter> fireTruck = new FireTruck<Firefighter>("Test fire truck", 2);
+        FireTruck<Firefighter> fireTruck = new FireTruck<>("Test fire truck", 2);
         fireTruck.embark(fireFighter1);
         fireTruck.embark(firefighter2);
 
@@ -110,10 +110,10 @@ public class VehiclesEmbarkingTest {
         Firefighter firefighter = new Firefighter("Andrew");
         PoliceOfficer policeOfficer = new PoliceOfficer("George");
 
-        Taxi<Human> taxi = new Taxi<Human>("Test Taxi", 4);
-        Bus<Human> bus = new Bus<Human>("Test Bus", 10);
-        FireTruck<Firefighter> fireTruck = new FireTruck<Firefighter>("Test fire truck", 2);
-        PoliceCar<PoliceOfficer> policeCar = new PoliceCar<PoliceOfficer>("Test police car", 3);
+        Taxi<Human> taxi = new Taxi<>("Test Taxi", 4);
+        Bus<Human> bus = new Bus<>("Test Bus", 10);
+        FireTruck<Firefighter> fireTruck = new FireTruck<>("Test fire truck", 2);
+        PoliceCar<PoliceOfficer> policeCar = new PoliceCar<>("Test police car", 3);
 
         String expectedMessage = "Passenger is not on board.";
 
@@ -136,12 +136,12 @@ public class VehiclesEmbarkingTest {
         Firefighter firefighter = new Firefighter("Andrew");
         PoliceOfficer policeOfficer = new PoliceOfficer("George");
 
-        Taxi<Human> taxi = new Taxi<Human>("Test Taxi", 4);
-        Bus<Human> bus = new Bus<Human>("Test Bus", 10);
-        FireTruck<Firefighter> fireTruck1 = new FireTruck<Firefighter>("Test fire truck 1", 2);
-        FireTruck<Firefighter> fireTruck2 = new FireTruck<Firefighter>("Test fire truck 2", 2);
-        PoliceCar<PoliceOfficer> policeCar1 = new PoliceCar<PoliceOfficer>("Test police car 1", 3);
-        PoliceCar<PoliceOfficer> policeCar2 = new PoliceCar<PoliceOfficer>("Test police car 2", 3);
+        Taxi<Human> taxi = new Taxi<>("Test Taxi", 4);
+        Bus<Human> bus = new Bus<>("Test Bus", 10);
+        FireTruck<Firefighter> fireTruck1 = new FireTruck<>("Test fire truck 1", 2);
+        FireTruck<Firefighter> fireTruck2 = new FireTruck<>("Test fire truck 2", 2);
+        PoliceCar<PoliceOfficer> policeCar1 = new PoliceCar<>("Test police car 1", 3);
+        PoliceCar<PoliceOfficer> policeCar2 = new PoliceCar<>("Test police car 2", 3);
 
         String expectedMessage = "Passenger is already embarked.";
 
