@@ -15,11 +15,20 @@ public class ShapeView {
 
     public static final String SORT_AREA = "Showing the dataset sorted by area ascending";
     public static final String SORT_COLOR = "Showing the dataset sorted by shape color";
+    public static final String SAVE_FILE_QUERY = "Enter the name of a file to save";
+    public static final String LOAD_FILE_QUERY = "Enter the name of a file to load";
+    public static final String SAVING_TO_FORM = "Saving dataset to %s...";
+    public static final String LOADING_FROM_FORM = "Loading dataset from %s...";
+    public static final String SAVED = "Dataset has been saved successfully.";
+    public static final String LOADED = "Dataset has been loaded successfully.";
+
     public static final String HELP = """
             List of all commands:
             print;
             sum (all, t, r, c);
             sort (area, color);
+            save {file name};
+            load {file name};
             exit;
             help.
             """;

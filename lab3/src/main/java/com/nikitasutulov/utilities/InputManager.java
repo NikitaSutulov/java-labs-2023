@@ -14,10 +14,14 @@ public class InputManager {
     public static final String SORT_COMMAND_START = "sort ";
     public static final String COLOR = "color";
     public static final String AREA = "area";
+    public static final String SAVE = "save";
+    public static final String LOAD = "load";
     public static final String EXIT = "exit";
     public static final String HELP = "help";
+
+    private final Scanner scanner = new Scanner(System.in);
     public String getCommandFromInput() {
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
         String enteredText;
 
         while (true) {
@@ -36,13 +40,18 @@ public class InputManager {
     private boolean isValidCommand(String command) {
         String[] validCommands = {PRINT_COMMAND, SUM_COMMAND_START + ALL, SUM_COMMAND_START + TRIANGLES,
                 SUM_COMMAND_START + RECTANGLES, SUM_COMMAND_START + CIRCLES, SORT_COMMAND_START + AREA,
-                SORT_COMMAND_START + COLOR, EXIT, HELP};
+                SORT_COMMAND_START + COLOR, SAVE, LOAD, EXIT, HELP};
 
         for (String validCommand : validCommands) {
-            if (command.contentEquals(validCommand)) {
+            if (command.matches(validCommand)) {
                 return true;
             }
         }
         return false;
+    }
+
+    public String getFileNameFromInput(String query) {
+        System.out.println(query);
+        return scanner.nextLine();
     }
 }

@@ -1,8 +1,12 @@
 package com.nikitasutulov.controllers;
 
+import com.nikitasutulov.utilities.DatasetReader;
+import com.nikitasutulov.utilities.DatasetWriter;
 import com.nikitasutulov.utilities.InputManager;
 import com.nikitasutulov.models.ShapeModel;
 import com.nikitasutulov.views.ShapeView;
+
+import java.io.IOException;
 
 public class ShapeController {
     private final ShapeModel model;
@@ -17,6 +21,7 @@ public class ShapeController {
         InputManager inputManager = new InputManager();
         while (true) {
             String command = inputManager.getCommandFromInput();
+            String fileName;
             switch (command) {
                 case InputManager.EXIT:
                     view.printMessage(ShapeView.EXITING);
@@ -44,6 +49,28 @@ public class ShapeController {
                     break;
                 case InputManager.SORT_COMMAND_START + InputManager.COLOR:
                     view.printDatasetWithMessage(ShapeView.SORT_COLOR, model.getDatasetSortedByColor());
+                    break;
+                case InputManager.SAVE:
+                    fileName = inputManager.getFileNameFromInput(ShapeView.SAVE_FILE_QUERY);
+                    view.printMessage(String.format(ShapeView.SAVING_TO_FORM, fileName));
+                    DatasetWriter datasetWriter = new DatasetWriter();
+                    try {
+                        datasetWriter.writeDatasetToFile(model.getDataset(), fileName);
+                    } catch (IOException e) {
+                        throw new RuntimeException("Problem while saving dataset to file: " + e.getMessage());
+                    }
+                    view.printMessage(ShapeView.SAVED);
+                    break;
+                case InputManager.LOAD:
+                    fileName = inputManager.getFileNameFromInput(ShapeView.LOAD_FILE_QUERY);
+                    view.printMessage(String.format(ShapeView.LOADING_FROM_FORM, fileName));
+                    DatasetReader datasetReader = new DatasetReader();
+                    try {
+                        model.setDataset(datasetReader.readDatasetFromFile(fileName));
+                    } catch (Exception e) {
+                        throw new RuntimeException("Problem while loading dataset from file: " + e.getMessage());
+                    }
+                    view.printMessage(ShapeView.LOADED);
                     break;
                 default:
                     view.printMessage(ShapeView.INVALID_COMMAND);

@@ -15,7 +15,7 @@ public class ShapeModel {
     public static final int SHAPES_TYPES_COUNT = 3;
     public static final float SIZE_RANGE = 25f;
     public static final String[] COLORS = {"Red", "Blue", "Green", "Yellow", "Orange", "Purple"};
-    private final Shape[] dataset;
+    private Shape[] dataset;
     public ShapeModel() {
         dataset = new Shape[DATASET_SIZE];
         generateRandomDataset();
@@ -60,6 +60,10 @@ public class ShapeModel {
 
     public Shape[] getDataset() {
         return dataset;
+    }
+
+    public void setDataset(Shape[] dataset) {
+        this.dataset = dataset;
     }
 
     public float calculateAllShapesAreaSum() {
