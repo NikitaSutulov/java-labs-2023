@@ -1,4 +1,4 @@
-package com.nikitasutulov.lab5;
+package com.nikitasutulov.lab5.task1;
 
 import java.io.*;
 import java.util.ArrayList;
