@@ -40,14 +40,14 @@ public class Task4 {
 
             System.out.println("Tags in lexicographic order");
             for (Map.Entry<String, Integer> entry : entryArray) {
-                System.out.println(entry.getKey() + ": " + entry.getValue());
+                System.out.println("<" + entry.getKey() + ">: " + entry.getValue());
             }
 
             Arrays.sort(entryArray, Map.Entry.comparingByValue());
 
             System.out.println("\nTags in ascending order of appearance frequency");
             for (Map.Entry<String, Integer> entry : entryArray) {
-                System.out.println(entry.getKey() + ": " + entry.getValue());
+                System.out.println("<" + entry.getKey() + "> : " + entry.getValue());
             }
         } catch (IOException e) {
             e.printStackTrace();
