@@ -62,7 +62,6 @@ public class Main {
             System.out.print(blue + "English: " + reset + entry.getKey() + "; ");
             System.out.println(yellow + "Ukrainian: " + reset + entry.getValue());
         }
-
     }
 
     private static void pTranslate(Translator translator, Scanner scanner) {

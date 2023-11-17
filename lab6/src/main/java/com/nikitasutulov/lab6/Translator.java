@@ -23,7 +23,7 @@ public class Translator {
 
     private void validateUkrainianWord(String ukrainianTranslation) {
         if (!ukrainianTranslation.matches("[А-Яа-яҐґЄєЇїІі']+")) {
-            throw new InputMismatchException("Ukrainian word was expected to be written with latin characters");
+            throw new InputMismatchException("Ukrainian word was expected to be written with cyrillic characters");
         }
     }
 
