@@ -2,11 +2,11 @@ package com.nikitasutulov.lab8;
 
 import java.util.concurrent.ThreadLocalRandom;
 
-public class MonteCarloPiThread implements Runnable {
+public class MonteCarloPiRunnable implements Runnable {
     private final long iterations;
     private long pointsInsideTheCircle;
 
-    public MonteCarloPiThread(long iterations) {
+    public MonteCarloPiRunnable(long iterations) {
         this.iterations = iterations;
     }
 

@@ -19,14 +19,14 @@ public class Main {
             }
         }
 
-        MonteCarloPiThread[] threads = new MonteCarloPiThread[numThreads];
+        MonteCarloPiRunnable[] runnables = new MonteCarloPiRunnable[numThreads];
         Thread[] workerThreads = new Thread[numThreads];
 
         startTime = (double) System.nanoTime() / 1000000F;
 
         for (int i = 0; i < numThreads; i++) {
-            threads[i] = new MonteCarloPiThread(iterations / numThreads);
-            workerThreads[i] = new Thread(threads[i]);
+            runnables[i] = new MonteCarloPiRunnable(iterations / numThreads);
+            workerThreads[i] = new Thread(runnables[i]);
             workerThreads[i].start();
         }
 
@@ -35,7 +35,7 @@ public class Main {
         try {
             for (int i = 0; i < numThreads; i++) {
                 workerThreads[i].join();
-                totalInsideCircle += threads[i].getResult();
+                totalInsideCircle += runnables[i].getResult();
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
