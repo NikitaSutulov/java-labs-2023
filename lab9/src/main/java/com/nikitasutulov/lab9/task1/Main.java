@@ -5,7 +5,7 @@ import java.util.Random;
 import static com.nikitasutulov.lab9.task1.Bank.ACCOUNTS_NUMBER;
 
 public class Main {
-    public static final int THREADS_NUMBER = 100;
+    public static final int THREADS_NUMBER = 1000;
 
     public static void main(String[] args) {
         Thread[] threads = new Thread[THREADS_NUMBER];
